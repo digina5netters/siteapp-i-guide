@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 指南与访问</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+      background-color: #fcf9f5;
+      color: #2c2c2c;
+      line-height: 1.7;
+    }
+
+    /* 深色头图 */
+    .hero {
+      background: linear-gradient(145deg, #1f1e24 0%, #2b2933 100%);
+      color: #ebe7e0;
+      padding: 4rem 1.5rem 3.2rem;
+      text-align: center;
+      position: relative;
+      isolation: isolate;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 70%, rgba(210, 185, 130, 0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 350;
+      letter-spacing: 2px;
+      margin-bottom: 0.75rem;
+      position: relative;
+    }
+    .hero h1 span {
+      font-weight: 600;
+      color: #decba6;
+    }
+    .hero p {
+      font-size: 1.1rem;
+      max-width: 680px;
+      margin: 1rem auto 0;
+      opacity: 0.85;
+      font-weight: 300;
+      position: relative;
+    }
+
+    /* 浅色正文区 */
+    .main-content {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 2.8rem 1.5rem 3.8rem;
+    }
+
+    .section-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem 2rem 2.2rem;
+      margin-bottom: 2.2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02), 0 1px 3px rgba(0,0,0,0.03);
+      transition: box-shadow 0.2s;
+    }
+    .section-card:last-of-type {
+      margin-bottom: 1.8rem;
+    }
+
+    .section-card h2 {
+      font-size: 1.35rem;
+      font-weight: 500;
+      margin-bottom: 0.8rem;
+      color: #1f1f1f;
+      border-left: 4px solid #c9a87b;
+      padding-left: 1rem;
+    }
+
+    .section-card p {
+      margin-bottom: 0.9rem;
+      font-size: 1rem;
+      color: #3b3b3b;
+    }
+    .section-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 强调色链接 */
+    a {
+      color: #9c7b58;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    a:hover {
+      color: #735f42;
+      border-bottom-color: #c9a87b;
+    }
+
+    .footnote-box {
+      background: #f5f1eb;
+      border-radius: 18px;
+      padding: 1.8rem 2rem;
+      margin: 0.8rem 0 1rem;
+      border: 1px solid #e3dbcf;
+    }
+    .footnote-box p {
+      font-size: 0.98rem;
+      color: #3d362e;
+    }
+
+    /* 页尾 */
+    .page-footer {
+      text-align: center;
+      padding: 2.2rem 1rem 2.8rem;
+      color: #63605a;
+      border-top: 1px solid #e1dad1;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .page-footer p {
+      font-size: 0.9rem;
+      letter-spacing: 0.3px;
+    }
+    .page-footer a {
+      color: #7a694e;
+    }
+
+    /* 响应式 */
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .section-card { padding: 1.6rem 1.2rem; }
+      .footnote-box { padding: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="hero">
+  <h1>一份关于 <span>爱游戏</span> 的简明指南</h1>
+  <p>从浏览方式到访问细节，清晰而自然的叙述</p>
+</header>
+
+<main class="main-content">
+
+  <!-- 背景说明 -->
+  <div class="section-card">
+    <h2>一些背景</h2>
+    <p>在信息频繁流动的当下，一个可靠的信息站点如同一座安静的灯塔。<a href="https://siteapp-i-game.com.cn">爱游戏</a> 所搭建的页面，并不是一个喧哗的广场，更像一处可以径直走进去、慢慢翻看的角落。它没有多余的弹窗，也没有刻意的催促，只把内容摆在合适的位置。之所以注意到它，是因为它的界面干净，指向明确——你几乎不需要花费额外的时间去理解“下一步该做什么”。</p>
+    <p>这份介绍并非广告，而是一种使用前的梳理。就像翻开一本杂志的卷首语，你不需要认同所有观点，但至少能大致嗅到它的气息。</p>
+  </div>
+
+  <!-- 三段自然介绍：特点 + 场景 + 提醒 -->
+  <div class="section-card">
+    <h2>特点：不过度打扰</h2>
+    <p>第一次打开 <a href="https://siteapp-i-game.com.cn">爱游戏</a> 的人，往往会留意到它的克制。导航栏只保留了必要的入口，正文的间距足够宽松，重要的信息被圈在卡片或浅色区块中，而不是用闪烁的按钮来抢夺视线。色彩方面，它选择了低饱和的暖灰与淡金，让人读起来不费力。这种设计背后有一种信任——它相信用户自己懂得选择，无需被反复引导。</p>
+  </div>
+
+  <div class="section-card">
+    <h2>场景：随手翻看，安静停留</h2>
+    <p>许多时候，我们打开一个页面只是为了确认一件事、读一段说明，或是回味某个熟悉的介绍。在那些短暂的间隙里，<a href="https://siteapp-i-game.com.cn">爱游戏</a> 提供了一种不催促的体验。你可以在通勤时滑动屏幕，也可以在工作间隙点开链接，浏览几段文字后自然关闭。它不要求你注册，不索要通知权限，甚至没有浮动的客服气泡。这种体验在如今的网络环境中，反而显得有些珍贵。</p>
+  </div>
+
+  <div class="section-card">
+    <h2>访问之前的提醒</h2>
+    <p>网站本身是安全的，但任何公开站点都建议你留意网络环境。尽量使用自己的数据流量或可信的 Wi-Fi，避免在公共设备上保存密码。此外，<a href="https://siteapp-i-game.com.cn">爱游戏</a> 的页面主要是信息展示型，如果你发现某些页面的加载异常或出现非预期的跳转，请先核对域名是否正确——毕竟仿冒链接并不罕见。保持基本的警觉，浏览体验会更顺畅。</p>
+  </div>
+
+  <!-- FAQ 摘要 / 额外提示卡片 -->
+  <div class="footnote-box">
+    <p><strong>常见疑问片段</strong> —— 是否需要下载额外软件？不需要，页面基于浏览器即可打开，无需安装任何插件。内容更新频率如何？通常按月或按专题调整，没有固定的推送机制，适合主动访问。如果你对某一部分内容感兴趣，随时可以再次打开 <a href="https://siteapp-i-game.com.cn">爱游戏</a> 翻看。</p>
+  </div>
+
+</main>
+
+<footer class="page-footer">
+  <p>—— 从简明指南与访问提醒的角度展开 · 杂志专题式介绍 ——</p>
+  <p style="margin-top: 0.6rem;">直接浏览 <a href="https://siteapp-i-game.com.cn">爱游戏</a> 即可获得完整内容</p>
+</footer>
+
+</body>
+</html>
