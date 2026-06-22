@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>竞彩网 · 信息介绍页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f7fc;
+            color: #1e2a3a;
+            line-height: 1.7;
+        }
+
+        /* ── 深色 Hero ── */
+        .hero {
+            background: linear-gradient(148deg, #0b1a2b 0%, #1c2f44 70%, #263f59 100%);
+            color: #eef3f9;
+            padding: 5rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -40%;
+            left: -10%;
+            width: 70%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 50%, rgba(46, 134, 193, 0.10) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2.7rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.8rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero p {
+            max-width: 600px;
+            margin: 0.5rem auto 0;
+            font-size: 1.1rem;
+            color: #cbdbe9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero .sub-line {
+            margin-top: 1.2rem;
+            font-size: 0.95rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            display: inline-block;
+            padding-top: 0.9rem;
+            color: #aac0d4;
+        }
+
+        /* ── 正文区域 ── */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background: #ffffff;
+            margin: 2.5rem auto;
+            border-radius: 24px;
+            box-shadow: 0 8px 28px rgba(0, 20, 40, 0.05);
+            padding: 2.5rem 2.8rem;
+            transition: box-shadow 0.2s ease;
+        }
+
+        @media (max-width: 640px) {
+            section {
+                padding: 1.8rem 1.5rem;
+                margin: 1.8rem auto;
+                border-radius: 18px;
+            }
+
+            .hero {
+                padding: 4rem 1.2rem 3rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        section h2 {
+            font-size: 1.6rem;
+            font-weight: 550;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.01em;
+            color: #0b1f2f;
+            border-left: 5px solid #2b7fc9;
+            padding-left: 1rem;
+        }
+
+        section p {
+            margin-bottom: 1rem;
+        }
+
+        /* ── 强调色 ── */
+        a {
+            color: #1e6eb5;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            color: #0e4d83;
+            border-bottom: 1px solid #2b7fc9;
+        }
+
+        .highlight-link {
+            color: #1e6eb5;
+            font-weight: 500;
+        }
+
+        /* ── 卡片式特点（优势区） ── */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.8rem;
+            margin: 1.8rem 0 0.4rem;
+        }
+
+        .feature-item {
+            background: #f6faff;
+            border-radius: 20px;
+            padding: 1.5rem 1.2rem;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        .feature-item:hover {
+            background: #eaf3fd;
+            transform: translateY(-2px);
+        }
+
+        .feature-item .icon {
+            font-size: 2rem;
+            margin-bottom: 0.3rem;
+            display: block;
+        }
+
+        .feature-item h3 {
+            font-size: 1.1rem;
+            font-weight: 550;
+            margin-bottom: 0.4rem;
+            color: #0b2a40;
+        }
+
+        .feature-item p {
+            font-size: 0.95rem;
+            color: #2f4055;
+            margin-bottom: 0;
+        }
+
+        /* ── FAQ 摘要 ── */
+        .faq-list {
+            margin: 1.2rem 0 0.2rem;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #e3eaf2;
+            padding: 0.9rem 0;
+        }
+
+        .faq-item:last-of-type {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 550;
+            color: #0b1f2f;
+            display: block;
+            margin-bottom: 0.2rem;
+        }
+
+        .faq-answer {
+            color: #3a4c62;
+            margin-left: 0.2rem;
+        }
+
+        /* ── 底部 ── */
+        .site-footer {
+            text-align: center;
+            padding: 2.2rem 1.5rem 2.8rem;
+            color: #5a6f82;
+            font-size: 0.9rem;
+            border-top: 1px solid #dbe3ed;
+            margin-top: 1rem;
+        }
+
+        .site-footer a {
+            border-bottom: none;
+        }
+
+        .site-footer p {
+            margin-bottom: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO 区 -->
+    <header class="hero">
+        <h1>竞彩网 · 信息指引</h1>
+        <p>一个围绕竞彩赛事信息与数据参考的站点，面向希望了解竞彩内容的浏览者。</p>
+        <div class="sub-line">理性看待 · 客观参考 · 持续完善</div>
+    </header>
+
+    <!-- 正文部分 -->
+    <main class="container">
+
+        <!-- 站点介绍 / 可信说明 -->
+        <section>
+            <h2>关于该站</h2>
+            <p>
+                <a href="https://new-jcw.com">竞彩网</a> 是一个以竞彩赛事数据、资讯聚合为主的非官方信息平台。站内内容涵盖赛事前瞻、历史数据对比、球队动态整理等模块，力求为浏览者提供相对清晰、结构化的信息参考。网站由个人或小团队维护，不具备官方背景，所展示内容均来源于公开资料或合规渠道，仅供用户作为辅助了解之用。
+            </p>
+            <p>
+                相较于直接浏览零散消息，该站尝试将竞彩相关的基础信息以更易读的形式组织呈现。无论你是刚开始接触竞彩领域，还是希望快速查阅某场比赛的背景资料，都可以在站内找到对应的内容板块。当然，所有信息均不构成任何投注建议或保证，请结合自身判断使用。
+            </p>
+        </section>
+
+        <!-- 优势区 / 特点  -->
+        <section>
+            <h2>站点特点</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <span class="icon">📊</span>
+                    <h3>结构化数据</h3>
+                    <p>球队战绩、交锋记录、近期走势等以表格或卡片分类，方便横向对比。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">📅</span>
+                    <h3>赛事覆盖</h3>
+                    <p>覆盖主流联赛与杯赛，重点场次会提供简要的前瞻或回顾。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🔍</span>
+                    <h3>信息聚合</h3>
+                    <p>整合多方公开数据，减少在不同页面间切换查找的负担。</p>
+                </div>
+                <div class="feature-item">
+                    <span class="icon">🧭</span>
+                    <h3>界面简洁</h3>
+                    <p>页面布局注重阅读体验，弱化广告干扰，突出内容本身。</p>
+                </div>
+            </div>
+            <p style="margin-top:1.5rem; font-size:0.98rem; color:#2d445e;">
+                这些特点并非宣称完美，而是基于当前阶段的设计思路。站点会持续根据反馈调整结构与内容呈现方式。
+            </p>
+        </section>
+
+        <!-- 说明区 / 场景与提醒 -->
+        <section>
+            <h2>适用场景与提醒</h2>
+            <p>
+                适合希望在赛前快速了解两队基础数据的浏览者。例如查询主客场战绩、近期进球分布、交锋史等客观指标，再结合自己的分析思路进行判断。站点不提供任何形式的“推荐”“预测”或“保证结果”，请勿将本站内容等同于投资建议。
+            </p>
+            <p>
+                另外，由于数据更新存在一定延迟，且部分深度统计可能不够全面，建议同时参考官方或权威体育媒体进行交叉印证。如果你发现数据有明显出入，欢迎通过站点预留的反馈渠道告知维护者。
+            </p>
+        </section>
+
+        <!-- FAQ摘要 -->
+        <section>
+            <h2>常见疑问 · 摘要</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <span class="faq-question">Q：该站是官方竞彩网站吗？</span>
+                    <span class="faq-answer">不是。<a href="https://new-jcw.com">竞彩网</a> 为信息聚合站点，与任何官方机构无直接关联。</span>
+                </div>
+                <div class="faq-item">
+                    <span class="faq-question">Q：数据来源可靠吗？</span>
+                    <span class="faq-answer">数据主要采自公开赛事统计平台及联赛官网，但无法保证100%实时或绝对准确，仅供参考。</span>
+                </div>
+                <div class="faq-item">
+                    <span class="faq-question">Q：是否收费？需要注册吗？</span>
+                    <span class="faq-answer">目前站内所有内容免费阅读，不强制注册或登录。部分功能可能后续调整，以实际页面为准。</span>
+                </div>
+                <div class="faq-item">
+                    <span class="faq-question">Q：我能投注或购买服务吗？</span>
+                    <span class="faq-answer">本站不提供投注、代购、付费推荐等任何涉及资金交易的服务。请通过合法渠道参与相关活动。</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 底部链接 -->
+    <footer class="site-footer">
+        <p>了解更多赛事数据与资讯，可前往 <a href="https://new-jcw.com">竞彩网</a> 浏览。</p>
+        <p style="font-size:0.85rem; margin-top:0.8rem; opacity:0.7;">—— 仅作信息参考，请理性看待 ——</p>
+    </footer>
+
+</body>
+</html>
